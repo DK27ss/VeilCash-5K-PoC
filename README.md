@@ -20,6 +20,8 @@
 
 An attacker exploited a fatal misconfiguration in the Groth16 zk-SNARK verifier used by Veil Protocol on Base, the verification key's `delta` parameter was set identical to `gamma` (both equal to the BN254 G2 generator), completely breaking the soundness of the proof system, this allowed the attacker to forge valid zero-knowledge proofs for arbitrary public inputs and drain the entire 0.1 ETH privacy pool with 29 fraudulent withdrawals in a single transaction, without ever having deposited.
 
+<img width="1801" height="231" alt="image" src="https://github.com/user-attachments/assets/65651624-98cb-4072-a076-f70d58128243" />
+
 ---
 
 ## Veil Protocol
@@ -81,6 +83,8 @@ e(-alpha1, beta2) * e(alpha1, beta2) * e(vk_x, gamma2) * e(-vk_x, gamma2)
 = 1 * 1 = 1   (check passes)
 ```
 
+<img width="924" height="200" alt="image" src="https://github.com/user-attachments/assets/07184b48-ea98-491e-a3e8-63c15c7e5976" />
+
 The first two terms cancel (point and its negation paired with the same G2 element), the last two terms cancel because `delta2 == gamma2` and `C = -vk_x`. **No knowledge of the witness is required.**
 
 For each withdrawal, the verifier computes `vk_x` from the public inputs using the `IC[]` points hardcoded in the verifier
@@ -89,6 +93,8 @@ For each withdrawal, the verifier computes `vk_x` from the public inputs using t
 vk_x = IC[0] + input[0] * IC[1] + input[1] * IC[2] + input[2] * IC[3]
              + input[3] * IC[4] + input[4] * IC[5] + input[5] * IC[6]
 ```
+
+<img width="888" height="469" alt="image" src="https://github.com/user-attachments/assets/06d8bb18-af27-4d76-ac93-102b1185406c" />
 
 The public inputs are:
 
@@ -158,6 +164,8 @@ The attacker used obviously fabricated nullifier hashes
 These are clearly fake -- no valid Tornado Cash commitment would produce these nullifiers, yet the pool accepted them because the proof verification passed due to the broken verifier.
 
 ### Output
+
+<img width="931" height="487" alt="image" src="https://github.com/user-attachments/assets/c462cc09-8b3a-41b5-8d5f-0b97b59d89cf" />
 
 ```
 [PASS] testDeltaEqualsGamma()
