@@ -46,6 +46,8 @@ e(-A, B) * e(alpha1, beta2) * e(vk_x, gamma2) * e(C, delta2) == 1
 
 ## Root cause
 
+Tx : https://app.blocksec.com/phalcon/explorer/tx/base/0x5ff6dbc33e77fab8dc086bb9ea3c88f1ba81df198d24ec9fc0c5b50fb1a4a17d
+
 The Groth16 verifier deployed at `0x1E65C...` has its verification key parameters `delta2` and `gamma2` set to the **exact same value** -- the BN254 G2 generator point:
 
 ```
