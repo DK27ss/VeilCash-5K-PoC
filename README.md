@@ -197,14 +197,10 @@ pool.withdraw(pA, pB, pC, root, nullifier, recipient, address(0), 0, 0);
 
 ---
 
-## 11. References
+## References
 
 - [Groth16 Paper (Jens Groth, 2016)](https://eprint.iacr.org/2016/260.pdf) -- Original proof system specification
 - [EIP-196: BN254 Precompile (ecAdd, ecMul)](https://eips.ethereum.org/EIPS/eip-196) -- BN254 base field modulus P = `21888242871839275222246405745257275088696311157297823662689037894645226208583`
 - [EIP-197: BN254 Pairing Precompile](https://eips.ethereum.org/EIPS/eip-197) -- Pairing check used by Groth16 verifiers
 - [Tornado Cash Contracts](https://github.com/tornadocash/tornado-core) -- Original privacy pool implementation
 - [snarkjs](https://github.com/iden3/snarkjs) -- zkSNARK toolchain for Groth16 proof generation and verification
-
----
-
-*This post-mortem was produced as part of a security research analysis. The PoC is provided for educational purposes only.*
