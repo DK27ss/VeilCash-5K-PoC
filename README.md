@@ -165,7 +165,7 @@ These are clearly fake -- no valid Tornado Cash commitment would produce these n
 
 ### Output
 
-<img width="931" height="487" alt="image" src="https://github.com/user-attachments/assets/c462cc09-8b3a-41b5-8d5f-0b97b59d89cf" />
+<img width="916" height="481" alt="image" src="https://github.com/user-attachments/assets/a0acd739-1331-42fb-881d-f8e2bdb68c26" />
 
 ```
 [PASS] testDeltaEqualsGamma()
